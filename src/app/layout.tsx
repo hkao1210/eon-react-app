@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/shared/Navigation/Navigation";
+import UploadVideoModalProvider from "@/context/UploadVideoModalContext";
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["100", "300", "400", "500", "700"] });
 
@@ -17,7 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={roboto.className}><Navigation/>{children}</body>
+      <body className={roboto.className}>
+        <UploadVideoModalProvider>
+          <Navigation/>
+          {children}
+        </UploadVideoModalProvider>
+     </body>
     </html>
   );
 }
