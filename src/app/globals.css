@@ -6,3 +6,11 @@ body{
   @apply text-white;
   @apply bg-stone-950
 }
+
+.hover\:opacity-80 { /* Note the \: to escape the colon for special CSS selectors */
+  transition: opacity 0.2s ease-in-out; /* Add a smooth transition */
+}
+
+.hover\:opacity-80:hover {
+  opacity: 0.8;  /* Reduce opacity slightly on hover */
+}

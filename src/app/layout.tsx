@@ -1,8 +1,10 @@
+
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/shared/Navigation/Navigation";
 import UploadVideoModalProvider from "@/context/UploadVideoModalContext";
+import Carousel from "@/components/video/Carousel";
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["100", "300", "400", "500", "700"] });
 
