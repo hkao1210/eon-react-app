@@ -15,12 +15,8 @@ datasource db {
 
 model Video {
   id           String   @id @default(auto()) @map("_id") @db.ObjectId
-  channelId    String   @db.ObjectId
   title        String
   description  String
-  // likeCount Int @default(0)
-  // dislikeCount Int @default(0)
-  // viewCount Int @default(0)
   createdAt    DateTime @default(now())
   thumbnailSrc String
   videoSrc     String
