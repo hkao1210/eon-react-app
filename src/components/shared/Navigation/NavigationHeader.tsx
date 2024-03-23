@@ -1,6 +1,7 @@
 import React from 'react';
 import dogImage from '../dog.jpg'; 
 import Image from 'next/image';
+import Search from './Navbar/Search';
 interface NavLink {
   label: string;
   href: string;
@@ -26,9 +27,11 @@ const Navbar = () => {
             className="px-3 py-2 rounded-md hover:bg-gray-900"
           >
             {navLink.label}
+            
           </a>
         ))}
-        <input type="text" className="px-3 py-2 rounded-md bg-gray-900 text-white" placeholder="Search" />
+        <Search/>
+     
         <div className = "h-7 w-7 md:h-10 md:w-10 overflow">
             <Image src={dogImage} alt="Bruh" className="rounded-full"/>
         </div>
